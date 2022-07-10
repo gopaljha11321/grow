@@ -57,7 +57,6 @@ prometheus-client==0.10.1
 prompt-toolkit==3.0.18
 PyAutoGUI==0.9.52
 pycparser==2.20
-pygame==2.0.1
 PyGetWindow==0.0.9
 Pygments==2.8.1
 PyJWT==2.4.0
