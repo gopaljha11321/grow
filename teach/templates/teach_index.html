@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    {% load static %}
+<head>
+<meta charset = 'UTF-8'>
+<title>Student Account</title>
+
+<link href="{% static 'teach_index.css' %}" rel="stylesheet"  type="text/css"/>
+</head>
+<body>
+
+    <div id="container">
+    <div class="sub">
+<form action = 'check' method = 'post'>{% csrf_token %} 
+
+<input type = 'email' name = 'email' placeholder = 'Email address'><br>
+<input type = 'password' name = 'pass' id="see" placeholder = 'Enter your password'><br>
+<br>
+<div style="position: relative; left:-33%">
+<input type="checkbox"   onclick="show()" > Show Password<br>
+</div>
+<input name = 'log' type = 'submit' value = 'Log In'>
+<br>
+
+<a href = 'http://127.0.0.1:8000/#contact' >Having trouble logging in?</a><br><br>
+<div class = 'before'></div>or
+<div class = 'after'></div>
+<br><br>
+<input class = 'sign' type = 'submit' value = 'Sign Up'>
+
+</form>
+<br>
+<div style="color:red; font-weight:700 ">{{status}}</div>
+</div>
+</div>
+
+
+</body>
+<script>
+function show()
+{
+    console.log("ram")
+    var x=document.getElementById("see");
+    if(x.type==="password")
+    {
+        x.type="text"
+    }
+    else{
+        x.type="password"
+    }
+}
+
+</script>
+</html>

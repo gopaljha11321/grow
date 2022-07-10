@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>{% load static %}
+    <!-- ======= Styles ====== -->
+   
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="{% static 'image/student.png' %}" alt="" width="20px">
+                        </span>
+                        <span class="title">{{fname}}</span>
+                    </a>
+                </li>
+
+                <li id="dash">
+                    <a href="#">
+                        <span class="icon" >
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title" >Dashboard</span>
+                    </a>
+                </li>
+
+                <li id="test">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Test</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/#contact">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Messages</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/#contact">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+
+                <li id="set">
+                    <a href="#">
+                        <span class="icon" >
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title" >Settings</span>
+                    </a>
+                </li>
+
+                <li id="pass">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/teach">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user" id="profile">
+                    <img src="{% static 'image/user.png' %}" alt="">
+                </div>
+            </div>
+            <div class="container" id="dashboard">  
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="numbers">HTML</div>
+                            <div class="cardName"></div>
+                        </div>
+    
+                        <div class="iconBx">
+                            <img src="{% static 'image/html.png' %}" type="png" width="50px">
+                        </div>
+                    </div>
+                        <div class="card">
+                            <div>
+                                <div class="numbers">CSS</div>
+                            </div>
+        
+                            <div class="iconBx">
+                                <img src="{% static 'image/css.png' %}" type="png" width="50px">
+                            </div>
+                        </div>
+                  
+        </div>
+    </div>
+    <link rel="stylesheet" href="{% static 'try1.css' %}">
+    
+    <div class="container1" id="setting">
+        <div class="title">Setting</div>
+        <div class="content">
+          <form method="post"  id="myform">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text" placeholder="Enter your first name" value="{{fname}}" name="fname" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" placeholder="Enter your last name" value="{{lname}}" name="lname" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter your email" name="email"  value="{{email}}" readonly>
+              </div>
+             
+              <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text" value="{{address}}" placeholder="Enter your Address" name="address" required>
+              </div>
+              <div class="input-box">
+                <span class="details" >Phone Number</span>
+                <input type="text" name="number" value="{{number}}" placeholder="Enter your number" required>
+              </div>
+    
+            </div>
+            <div>
+                <div style="font-weight: 500;">Courses</div>
+                <input style="font-weight: 500;"type="checkbox" name="c" id="" value="C"> C &nbsp;&nbsp;
+                <input style="font-weight: 500;"type="checkbox" name="cpp" id="" value="C++"> C++ &nbsp;&nbsp;
+                <input style="font-weight: 500;"type="checkbox" name="java" id="" value="JAVA"> JAVA &nbsp;&nbsp;
+                <input style="font-weight: 500;" type="checkbox" name="python" id="" value="PYTHON"> PYTHON &nbsp;&nbsp;
+                <input style="font-weight: 500;" type="checkbox" name="web" id="" value="Web_Development"> WEB DEVELOPMENT
+    
+            </div>
+            <div class="button">
+              <input type="button" onclick="push()" value="U">
+            </div>
+          </form>
+        </div>
+      </div>
+    <div class="container" id="test_div">No test scheduled</div>
+    <div class="container1" id="profile_div">
+        <div class="title">Profile</div>
+        <div class="content">
+          <form method="post"  id="myform">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text" placeholder="Enter your first name" name="fname" value="{{fname}}"disabled>
+              </div>
+              <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" placeholder="Enter your last name" name="lname" value="{{lname}}" disabled>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter your email" name="email"  value="{{email}}" disabled>
+              </div>
+              <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text" placeholder="Enter your Address" name="address" value="{{address}}" disabled>
+              </div>
+              
+              <div class="input-box">
+                <span class="details" >Phone Number</span>
+                <input type="text" name="number" value="{{number}}" placeholder="Enter your number" disabled>
+              </div>
+    
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="container1" id="password_div">
+        <div class="title">Update password</div>
+        <div class="content">
+          <form method="post" action="/password_chage"  id="myform">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Old Password</span>
+                <input type="password" placeholder="Enter your password" name="password_old"  required>
+              </div>
+              <div class="input-box">
+                <span class="details">New password</span>
+                <input type="password" placeholder="Enter your password" id="password" name="password"  required>
+              </div> 
+              <div class="input-box">
+                <span class="details">Confirm password</span>
+                <input type="text" placeholder="Enter your password" id="password2" required>
+                <div id="status"></div>
+               
+              </div> 
+            </div>
+            <div class="button">
+                <input type="button" onclick="push()" value="Change password">
+              </div>
+          </form>
+        </div>
+      </div>
+      <!-- =========== Scripts =========  -->
+    <script src="{% static 'main.js' %}"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="{% static 'jquery-3.6.0..js' %}"></script>
+    <script>
+        console.clear();
+    hide=()=>{
+        $("#dashboard").hide();
+        $("#setting").hide();
+        $('#test_div').hide();
+        $("#profile_div").hide();
+        $("#password_div").hide();
+    }
+    hide();
+    $("#dashboard").show();
+        $("#dash").click(function()
+        {
+            hide();
+            $("#dashboard").show();
+        })
+        $("#set").click(function()
+        {
+            hide();
+            $("#setting").show();
+        })
+    $("#test").click(function()
+    {
+        hide();
+        $("#test_div").show();
+    })
+    $("#profile").click(function()
+    {
+        hide();
+        $("#profile_div").show();
+    })
+    $("#pass").click(function()
+    {
+        hide();
+        $("#password_div").show();
+    })
+    var data=document.getElementById("status");
+    var pass=document.getElementById("password")
+    var pass2=document.getElementById("password2");
+      setInterval(function()
+      {
+      if(pass.value==pass2.value && pass.value!="")
+      {
+          data.style.color="green"
+          data.innerHTML="password match"
+      }
+      else if(pass.value!=""){
+          data.style.color="red"
+          data.innerHTML="*confirm password not match"
+      }
+      },1000)
+      function push()
+      {
+       //action="update"
+       if(pass.value==pass2.value && pass.value!="")
+       {
+         document.getElementById("myform").action="update"
+         document.getElementById("myform").submit();
+  
+       }
+      }
+    
+        </script>
+</body>
+
+</html>

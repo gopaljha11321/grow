@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<body>
+    <h1>
+        Login page for project 
+    </h1>
+    <form method="post" action="verify"> {% csrf_token %} 
+    <br><input type="text" name="email" id="email" value="{{email}}" placeholder="Email" readonly >
+    <br><br><input type="text" id="verify" placeholder="OTP" name="otp" text-align="center" >
+    <button onclick="verify()" type="submit">Login </button>
+    <p>{{message}}</p>
+</form>
+</body>
+</html>

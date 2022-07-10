@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>{% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'try.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Registration Form</title>
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form method="post"  id="myform">{% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" placeholder="Enter your first name" name="fname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" placeholder="Enter your last name" name="lname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" name="email"  value="{{email}}" readonly>
+          </div>
+          <div class="input-box">
+            <span class="details">New password</span>
+            <input type="password" placeholder="Enter your password" id="password" name="password"  required>
+          </div> 
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" placeholder="Enter your Address" name="address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm password</span>
+            <input type="text" placeholder="Enter your password" id="password2" required>
+            <div id="status"></div>
+           
+          </div> 
+          <div class="input-box">
+            <span class="details" >Phone Number</span>
+            <input type="text" name="number" placeholder="Enter your number" required>
+          </div>
+
+        </div>
+        <div>
+            <div style="font-weight: 500;">Courses</div>
+            <input style="font-weight: 500;"type="checkbox" name="c" id="" value="C"> C &nbsp;&nbsp;
+            <input style="font-weight: 500;"type="checkbox" name="cpp" id="" value="C++"> C++ &nbsp;&nbsp;
+            <input style="font-weight: 500;"type="checkbox" name="java" id="" value="JAVA"> JAVA &nbsp;&nbsp;
+            <input style="font-weight: 500;" type="checkbox" name="python" id="" value="PYTHON"> PYTHON &nbsp;&nbsp;
+            <input style="font-weight: 500;" type="checkbox" name="web" id="" value="Web_Development"> WEB DEVELOPMENT
+
+        </div>
+        <div class="button">
+          <input type="button" onclick="push()" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+  var data=document.getElementById("status");
+  var pass=document.getElementById("password")
+  var pass2=document.getElementById("password2");
+    setInterval(function()
+    {
+    if(pass.value==pass2.value && pass.value!="")
+    {
+        data.style.color="green"
+        data.innerHTML="password match"
+    }
+    else if(pass.value!=""){
+        data.style.color="red"
+        data.innerHTML="*confirm password not match"
+    }
+    },1000)
+    function push()
+    {
+     //action="update"
+     if(pass.value==pass2.value && pass.value!="")
+     {
+       document.getElementById("myform").action="update"
+       document.getElementById("myform").submit();
+
+     }
+    }
+        </script>
+</html>

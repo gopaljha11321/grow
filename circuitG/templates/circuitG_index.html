@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ciruitG
+        </title>
+    </head>
+    <body>
+        <h1>Login page for project </h1>
+        <br>
+        <form action="login" method="post">{% csrf_token %}
+        <br><input type="text" id="email" name="email" placeholder="Email">
+        <button id="otp" type="submit" onclick="send()">OTP</button>
+        </form>
+    </body>
+
+</html>

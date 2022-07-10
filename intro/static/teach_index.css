@@ -1,0 +1,108 @@
+body{
+	/* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+}
+#container
+{
+	/* border-width: 2px;
+	border-color: yellow;
+	border-style: solid; */
+	justify-content: center;
+	display: flex;
+	height: 100%;
+	position: relative;
+
+}
+.sub
+{
+	/* border-width: 2px;
+	border-color: yellow;
+	border-style: solid; */
+	text-align: center;
+	height: 380px;
+	/* top:30%; */
+
+	padding-top : 10%;	
+}
+input[name=email]
+{
+	width:355px;
+	height:40px;	
+	font-family:Arial, sans-serif;
+	border:1px solid #9DA3A6;
+	border-radius:4px;
+	padding-left:10px;			
+}
+input[name=pass]
+{
+	width:355px;
+	height:40px;
+	margin-top:10px;
+	font-family:Arial, sans-serif;
+	border:1px solid #9DA3A6;
+	border-radius:4px;
+	padding-left:10px;					
+}
+a:hover
+{
+	text-decoration:underline;
+}
+a
+{
+	text-decoration:none;
+	color: aqua;
+	color:#2886C5;
+	font-family:Arial, sans-serif;
+}
+
+input[name=log]
+{
+	width:368px;
+	height:44px;
+	border:1px solid #0171BB;
+	border-radius:4px;	
+	background-color:#0171BB;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:Arial, sans-serif;
+	margin-top:30px;
+	margin-bottom:20px;
+		
+}
+input[class=log]:hover
+{
+	background-color:#005EA6;
+}
+.after
+{
+	width:170px;
+	height:1px;
+	background-color:#B6BABC;
+	position: relative;	
+	top:-8px;
+	left:54%;	
+}
+.before
+{
+	width:170px;
+	height:1px;
+	background-color:#B6BABC;
+	position: relative;	
+	position: relative;	
+	top:11px;
+}
+
+input[class=sign]
+{
+	width:368px;
+	height:44px;
+	border:1px solid #E3E6EB;
+	border-radius:4px;		
+	background-color:#E3E6EB;
+	color:#2C2E2F;
+	font-weight:bold;
+	font-family:Arial, sans-serif;	
+}
+input[class=sign]:hover
+{
+	background-color:#D2DBE1;
+}

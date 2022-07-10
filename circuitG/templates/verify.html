@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    otp verify succesfully
+    <br>
+    <form action="post" action="/update">{ % csrf_token % }
+        <table width="500px" height="300px">
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input type="text" name="email" value="{{email}}" placeholder="" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <input type="text" class="name" name="user_name" placeholder="Name" required>
+                </td>
+                <tr>
+                    <td>
+                        Password
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password"placeholder="Password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm Password
+                    </td>
+                    <td>
+                        <input type="password"  id="password2" name="password2"placeholder="Confirm Password" required><br> <div id="status"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone number
+                    </td>
+                    <td>
+                        <input type="text" name="user_number" class="number"  placeholder="Phone Number" required>
+                    </td>
+                </tr>
+                <td>
+                    Address
+                </td>
+                <td>
+                    <input type="text" name="address" placeholder="Address" class="text" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Create Account">
+                </td>
+            </tr>
+            <tr><td>
+                <div id="status"></div>
+                
+            </td></tr>
+    </table>
+    </form>
+</body>
+<script>
+setInterval(function()
+{
+var data=document.getElementById("status");
+var pass=document.getElementById("password")
+var pass2=document.getElementById("password2");
+if(pass.value==pass2.value && pass.value!="")
+{
+    data.innerHTML="password match"
+}
+else if(pass.value!=""){
+    data.innerHTML="confirm password not match"
+}
+},2000)
+    </script>
+</html>
