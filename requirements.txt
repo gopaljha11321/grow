@@ -1,5 +1,4 @@
 ﻿argon2-cffi==20.1.0
-pypiwin32==300
 asgiref==3.5.0
 async-generator==1.10
 attrs==20.3.0
