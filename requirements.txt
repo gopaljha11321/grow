@@ -72,7 +72,6 @@ pyserial==3.5
 PySocks==1.7.1
 python-dateutil==2.8.1
 pyttsx3==2.90
-pytz==2021.3
 pywin32==300
 pywinpty==0.5.7
 PyYAML==6.0
