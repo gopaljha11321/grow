@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-%f5^zq2p5gn!@tch!sx%i^&epv=ghjvj$0&l#3lzp!q%$@*^ee
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["grow-project.herokuapp.com","127.0.0.1"]
+ALLOWED_HOSTS = ["grow-1.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
@@ -131,15 +131,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL='static/'
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'static'),
-    os.path.join(BASE_DIR,'circuitG/static'),
-    os.path.join(BASE_DIR,'teach/static')
-]
-# STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+    os.path.join(BASE_DIR,"static")
+    ]
+
+
+# STATIC_ROOT = os.path.join(BASE_DIR,'public')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
