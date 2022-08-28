@@ -43,12 +43,6 @@ jedi==0.18.1
 Jinja2==3.1.2
 jmespath==1.0.1
 jsonschema==4.9.0
-jupyter==1.0.0
-jupyter-client==7.3.4
-jupyter-console==6.4.4
-jupyter-core==4.11.1
-jupyterlab-pygments==0.2.2
-jupyterlab-widgets==1.1.1
 keras==2.9.0
 Keras-Preprocessing==1.1.2
 libclang==14.0.1
@@ -97,11 +91,6 @@ six==1.16.0
 soupsieve==2.3.2.post1
 sqlparse==0.2.4
 stack-data==0.3.0
-tensorboard==2.9.1
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.1
-tensorflow-estimator==2.9.0
-tensorflow-io-gcs-filesystem==0.26.0
 termcolor==1.1.0
 terminado==0.15.0
 tinycss2==1.1.1
