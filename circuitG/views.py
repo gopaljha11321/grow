@@ -44,7 +44,7 @@ def login(request):
     otp_num=request.POST.get("otp","default")
     email=request.POST.get("email","default")
     data=collection.find({"number":email})
-    otp_db=0;
+    otp_db=0
     for i in data:
         otp_db=i["otp"]
     otp_num=int(otp_num)
