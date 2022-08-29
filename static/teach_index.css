@@ -1,6 +1,4 @@
-body{
-	/* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
-}
+
 #container
 {
 	/* border-width: 2px;
@@ -91,7 +89,7 @@ input[class=log]:hover
 	top:11px;
 }
 
-input[class=sign]
+button[class=sign]
 {
 	width:368px;
 	height:44px;
@@ -102,7 +100,7 @@ input[class=sign]
 	font-weight:bold;
 	font-family:Arial, sans-serif;	
 }
-input[class=sign]:hover
+button[class=sign]:hover
 {
 	background-color:#D2DBE1;
 }

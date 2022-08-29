@@ -11,7 +11,7 @@
 
     <div id="container">
     <div class="sub">
-<form action = 'check' method = 'post'>{% csrf_token %} 
+<form action = 'check' id="form1" method = 'post'>{% csrf_token %} 
 
 <input type = 'email' name = 'email' placeholder = 'Email address'><br>
 <input type = 'password' name = 'pass' id="see" placeholder = 'Enter your password'><br>
@@ -26,15 +26,13 @@
 <div class = 'before'></div>or
 <div class = 'after'></div>
 <br><br>
-<input class = 'sign' type = 'submit' value = 'Sign Up'>
 
 </form>
+<button class ='sign' onclick="reg()">Sign Up</button>
 <br>
 <div style="color:red; font-weight:700 ">{{status}}</div>
 </div>
 </div>
-
-
 </body>
 <script>
 function show()
@@ -47,6 +45,12 @@ function show()
     else{
         x.type="password"
     }
+}
+const reg=()=>
+{
+   let form =document.getElementById('form1');
+   form.action="reg";
+   form.submit();
 }
 
 </script>

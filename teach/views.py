@@ -1,4 +1,5 @@
 from email import message
+from gc import collect
 from django.shortcuts import render
 from django.http import HttpResponse as hr;
 from teach.models import Student
@@ -27,6 +28,7 @@ def check(request):
     return render(request,"teach_index.html",message)
 def update(request):
     data={
+    "id":request.POST.get("email","default"),
     "fname":request.POST.get("fname","default"),
     "lname":request.POST.get("lname","default"),
     "email":request.POST.get("email","default"),
@@ -53,6 +55,17 @@ def update(request):
     # for i in a:
     #     if(i!=" "):
     #         email+=i;
-    collection.update({"email":data["email"]},data)
+    get_mail=collection.find({"email":data["email"]})
+    print("ram")
+    for i in get_mail:
+        print(i['fname'])
+        collection.update({"email":data["email"]},data)
+        print("data updated")
+        return render(request,"teach_index.html")
+    collection.insert(data)
+    
+    # print("insertion done!!")
     return render(request,"teach_index.html")
+def reg(request):
+    return render(request,'registration.html')
 
